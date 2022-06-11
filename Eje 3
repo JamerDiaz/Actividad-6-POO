@@ -1,0 +1,132 @@
+package geometricas;
+import java.util.Scanner;
+public class Principal {
+    
+    public static void main (String[] args){
+    
+    Scanner entrada=new Scanner (System.in);
+    double wlado, walt, wbas;
+    System.out.print("El lado del Cuadrado......");
+    wlado=entrada.nextDouble();
+    System.out.print("La base del Rectangulo......");
+    wbas=entrada.nextDouble();
+    System.out.print("La altua del Rectandulo......");
+    walt=entrada.nextDouble();
+    
+    cuadrado objcuad = new cuadrado(wlado);
+    rectangulo objrect = new rectangulo(wbas, walt);
+    
+    objcuad.setarea();
+    objcuad.setperimetro();
+    objcuad.dibujar();
+    
+    objrect.setarea();
+    objrect.setperimetro();
+    objrect.dibujar();
+    
+    package geometricas;
+
+public class rectangulo extends Geometricas{
+    private double base;
+    private double altura;
+    
+    public rectangulo (double b, double a){
+    
+    super ("Rectangulo");
+    base=b;
+    altura=a;
+    }
+    public void setarea(){
+    this.area=base*altura;
+    }
+    public void setperimetro (){
+    
+    this.perimetro=(base*2)+(altura*2);
+    }
+    public void dibujar (){
+    super.dibujar();
+    System.out.println("Dibujo");
+    for (int i=0; i<altura; i++){
+    for (int j=0; j<base; j++)
+    System.out.println("*");
+    System.out.println();
+    }
+    }
+
+}
+
+package geometricas;
+
+public class cuadrado extends Geometricas {
+  private double lado;  
+
+public cuadrado(double 1){
+
+    super ("Cuadrado");
+    lado=1;
+}
+
+public void setarea(){
+    
+    this.area=lado*lado;
+    
+    
+}
+public void setperimetro (){
+
+this.perimetro=lado*4;
+
+}
+public void dibujar(){
+super.dibujar();
+System.out.println("Dibujo cuadrado:");
+
+for(int i=0; i<lado;i++){
+    for(int j=0; j<lado; j++)
+        System.out.print("*");
+    System.out.println();
+
+}
+
+}
+}
+
+
+package geometricas;
+
+public class Geometricas {
+   protected String nombre;
+   protected double area;
+   protected double perimetro;
+   
+   public  Geometricas (String n){
+   
+   nombre=n;
+   
+   }
+   
+   public String getnombre(){
+   return nombre;
+   }
+  public double getarea(){
+  return area;
+  
+  }      
+  
+  public double getperimetro (){
+  return perimetro;
+  }
+  public void dibujar() {
+  
+  System.out.println("Nombre: "+this.getnombre());
+  System.out.println("Perimetro: "+this.getperimetro());
+  System.out.println("Area: "+this.getarea());
+  
+  
+  
+  
+  }
+        
+    }
+    
+
