@@ -1,0 +1,22 @@
+package funcionesmate;
+import java.util.Scanner;
+public class Funcionesmate {
+
+    public static void main(String[] args) {
+      int base1;
+      int base;
+      float resultado;
+      
+      Scanner potencia = new Scanner (System.in);
+      
+      System.out.println("Ingrese Numero de la base:");
+      base1 = potencia.nextInt();
+      System.out.println("Ingrese el exponente:");
+      base = potencia.nextInt();
+      
+      resultado = (float) Math.pow(base1, base);
+      System.out.println(base1 + "Fue elevado a la:"+ base  +"y el resultado es:"+ resultado);
+        
+    }
+    
+}
