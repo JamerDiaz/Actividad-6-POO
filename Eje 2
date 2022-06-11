@@ -1,0 +1,41 @@
+package rueda;
+
+public class Rueda {
+ int resultado;
+    public void BuscarRadio(int diametro) {
+        
+        resultado = diametro / 2;
+        
+        mostrar();
+    
+    }
+    public void mostrar (){
+     System.out.println ("Tu rueda tiene un radio de: "+ resultado);
+    
+    
+    
+    
+    }
+}
+
+package rueda;
+import java.util.Scanner;
+public class Vehiculo {
+    public static void main (String[] args){
+    
+    int diametro;
+    
+    Scanner digitar = new Scanner (System.in);
+    
+    Rueda Calcular  = new Rueda();
+    
+    System.out.println ("Por favor indique el diametro de su rueda:");
+    
+    diametro = digitar.nextInt();
+    
+    Calcular.BuscarRadio (diametro);
+    
+    
+    
+    }
+}
